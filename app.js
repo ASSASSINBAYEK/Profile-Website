@@ -1,4 +1,3 @@
-// Particles.js initialization
 document.addEventListener("DOMContentLoaded", () => {
   particlesJS("particles-js", {
     particles: {
@@ -22,10 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
         straight: false,
         out_mode: "out",
         bounce: false,
+        attract: { enable: true, rotateX: 600, rotateY: 1200 },
       },
     },
     interactivity: {
-      detect_on: "canvas",
+      detect_on: "window",
       events: {
         onhover: { enable: true, mode: "repulse" },
         onclick: { enable: true, mode: "push" },
@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modes: {
         repulse: { distance: 100, duration: 0.4 },
         push: { particles_nb: 4 },
+        grab: { distance: 200, line_linked: { opacity: 1 } },
       },
     },
     retina_detect: true,
